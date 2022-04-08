@@ -1,19 +1,20 @@
 let options = {
     root: null,
-    rootMargin: "0px",
+    rootMargin: "250px",
     threshold: 0
 }
-
-export default function lazyLoad(node, src){   
-    node.style.opacity = '0';                    
+export function lazyLoad(node, src){   
+    node.style.opacity = '0';                 
     function imageLoaded(){
-        node.style.opacity = '1';                        
+        node.style.opacity = '1'; 
+        observer.unobserve(node)                     
     }
+
     const observer = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
             node.src = src                                     
-            if (image.complete) {                               
-                loaded()        
+            if (node.complete) {                               
+                imageLoaded()        
             } else {
                 node.addEventListener('load', imageLoaded)          
             }
@@ -22,7 +23,8 @@ export default function lazyLoad(node, src){
     observer.observe(node)                                     
     return {
         destroy() {
-            node.removeEventListener('load', imageLoaded)           
+            node.removeEventListener('load', imageLoaded) 
+            observer.unobserve(node)          
         }
     }
 }

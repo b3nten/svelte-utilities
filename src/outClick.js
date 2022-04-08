@@ -1,4 +1,4 @@
-export default function outClick(node) {
+export function outClick(node) {
 	const handleClick = (event) => {
 		if (!node.contains(event.target)) {
 			node.dispatchEvent(new CustomEvent("outClick"));

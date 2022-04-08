@@ -1,9 +1,11 @@
-export default function IO(node, m){
-    const margin = "" + (m? m * -1 : 0) + "px 0px " + (m? m * -1 : 0)+ "px 0px" 
+export function intersectionObserver(node, params={}){
+    const marginTop = params.marginTop? params.marginTop : '0px'
+    const marginBottom = params.marginBottom? params.marginBottom : '0px'
+    const threshold = params.threshold? params.threshold : 0
     let options = {
         root: null,
-        rootMargin: margin,
-        threshold: 0,
+        rootMargin: '-'+ marginTop + " 0px " + '-'+marginBottom + " 0px" ,
+        threshold: threshold,
     }
     const handler = (e)=>{
         let event = e[0].isIntersecting ? "enter":"exit"
@@ -13,6 +15,6 @@ export default function IO(node, m){
     let observer = new IntersectionObserver(handler, options)
     observer.observe(node)
     return {
-        destroy(){if(observer){observer.disconnect()}}
+        destroy(){if(observer){observer.unobserve(node)}}
     }
 }
