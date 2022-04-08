@@ -1,7 +1,7 @@
 export default function outClick(node) {
 	const handleClick = (event) => {
 		if (!node.contains(event.target)) {
-			node.dispatchEvent(new CustomEvent("outclick"));
+			node.dispatchEvent(new CustomEvent("outClick"));
 		}
 	};
 	document.addEventListener("click", handleClick, true);
