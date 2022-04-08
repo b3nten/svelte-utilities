@@ -18,7 +18,10 @@ Clone at your own risk! Once I complete testing the package will be available on
 ## Usage
 
 ```javascript
+//npm
 import { animateIn, intersectionObserver, lazyLoad, outClick } from 'svelte-utilities'
+//manual import
+import { animateIn, intersectionObserver, lazyLoad, outClick } from '$lib/svelte-utilities'
 
 // animate in (margin refers to bottom margin)
 <div use:animateIn={node, {delay: 500, margin: '100px'}}>Hello World!</div>
