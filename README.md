@@ -12,7 +12,7 @@ svelte-utilities is a small utilities library for Svelte/SvelteKit that provides
 Clone at your own risk! Once I complete testing the package will be available on NPM.
 
 ```bash
-
+npm i @benten28/svelte-utilities
 ```
 
 ## Usage
