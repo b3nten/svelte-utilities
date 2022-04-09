@@ -9,8 +9,6 @@ svelte-utilities is a small utilities library for Svelte/SvelteKit that provides
 
 ## Installation
 
-Clone at your own risk! Once I complete testing the package will be available on NPM.
-
 ```bash
 npm i @benten28/svelte-utilities
 ```
@@ -19,7 +17,7 @@ npm i @benten28/svelte-utilities
 
 ```javascript
 //npm
-import { animateIn, intersectionObserver, lazyLoad, outClick } from 'svelte-utilities'
+import { animateIn, intersectionObserver, lazyLoad, outClick } from '@benten28/svelte-utilities'
 
 // animate in (margin refers to bottom margin)
 <div use:animateIn={{delay: 250, duration: 500, margin: '100px'}}>Hello World!</div>
