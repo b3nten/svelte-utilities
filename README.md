@@ -6,6 +6,7 @@ svelte-utilities is a small utilities library for Svelte/SvelteKit that provides
 * Outclick event handling
 * Intersection observers
 * Entry animations
+* Copy text onClick
 
 ## Installation
 
@@ -17,7 +18,7 @@ npm i @benten28/svelte-utilities
 
 ```javascript
 //npm
-import { animateIn, intersectionObserver, lazyLoad, outClick } from '@benten28/svelte-utilities'
+import { animateIn, intersectionObserver, lazyLoad, outClick, copyOnClick } from '@benten28/svelte-utilities'
 
 // animate in (margin refers to bottom margin)
 <div use:animateIn={{delay: 250, duration: 500, margin: '100px'}}>Hello World!</div>
