@@ -37,6 +37,12 @@ Hello World!
 
 // out click 
 <div use:outClick on:outClick={()=>console.log('clicked outside!')}>Hello World!</div>
+
+//copy on click
+<div use:copyOnClick>This text will be copied when the user clicks the div</div>
+//or
+<div bind:this={content}>Text to be copied</div>
+<button use:copyOnClick={content}>Copy Text</div>
 ```
 
 ## Contributing
