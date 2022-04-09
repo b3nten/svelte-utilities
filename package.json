@@ -1,5 +1,5 @@
 {
-  "name": "@benten/svelte-utilities",
+  "name": "@benten28/svelte-utilities",
   "version": "0.1.1",
   "description": "A collection of utilities for Svelte and SvelteKit.",
   "main": "src/index.js",
