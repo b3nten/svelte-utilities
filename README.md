@@ -27,8 +27,8 @@ import { animateIn, intersectionObserver, lazyLoad, outClick } from 'svelte-util
 // intersection observer
 <div 
 use:intersectionObserver={{marginTop: '100px', marginBottom: '100px', threshold: 0}}
-on:enter={()=>console.log('entering viewport')}
-on:exit={()=>console.log('exiting viewport')}>
+on:inView={()=>console.log('entering viewport')}
+on:outView={()=>console.log('exiting viewport')}>
 Hello World!
 </div>
 
